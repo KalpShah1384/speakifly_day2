@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #14213d;
+  /* Dark Navy from palette context */
+  --color-brand-primary: #214177;
+  --color-brand-secondary: #3667A6;
+  --color-brand-light: #82A6CB;
+  --color-brand-mint: #BDD8F1;
+
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Outfit", sans-serif;
+
+  --shadow-2xl: 0 25px 50px -12px rgba(45, 51, 107, 0.15);
+  --shadow-3xl: 0 35px 60px -15px rgba(45, 51, 107, 0.2);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-slate-600 bg-white;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold text-brand-dark tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-br from-brand-primary to-brand-secondary bg-clip-text text-transparent;
+  }
+}
