@@ -75,7 +75,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <a href="https://razorpay.me/@speakifly1" target="_blank" rel="noopener noreferrer" className="bg-brand-primary text-white px-7 py-2.5 rounded-2xl font-bold text-sm shadow-xl shadow-brand-primary/20 hover:scale-105 active:scale-95 transition-all">
+            <a href="https://rzp.io/rzp/osDrPHe" target="_blank" rel="noopener noreferrer" className="bg-brand-primary text-white px-7 py-2.5 rounded-2xl font-bold text-sm shadow-xl shadow-brand-primary/20 hover:scale-105 active:scale-95 transition-all">
               Claim Your Seat
             </a>
           </div>
@@ -105,7 +105,7 @@ const Navbar = () => {
                     {link.name}
                   </a>
                 ))}
-                <a href="https://razorpay.me/@speakifly1" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="bg-brand-primary text-white p-6 rounded-3xl text-center text-xl font-bold">
+                <a href="https://rzp.io/rzp/osDrPHe" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="bg-brand-primary text-white p-6 rounded-3xl text-center text-xl font-bold">
                   Register Now
                 </a>
               </div>
@@ -149,7 +149,7 @@ const HeroSection = () => (
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start mb-12">
-            <a href="https://razorpay.me/@speakifly1" target="_blank" rel="noopener noreferrer" className="group bg-brand-primary text-white px-10 py-5 rounded-2xl shadow-2xl shadow-brand-primary/30 hover:-translate-y-1 transition-all duration-300">
+            <a href="https://rzp.io/rzp/osDrPHe" target="_blank" rel="noopener noreferrer" className="group bg-brand-primary text-white px-10 py-5 rounded-2xl shadow-2xl shadow-brand-primary/30 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center gap-3 font-display font-bold text-xl">
                 Reserve My Seat for ₹99
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -494,7 +494,7 @@ const FinalCTASection = () => (
             </div>
           </div>
 
-          <a href="https://razorpay.me/@speakifly1" target="_blank" rel="noopener noreferrer" className="bg-white text-brand-primary px-12 py-6 rounded-3xl text-2xl font-black shadow-3xl hover:bg-brand-mint hover:scale-105 transition-all duration-300 inline-block">
+          <a href="https://rzp.io/rzp/osDrPHe" target="_blank" rel="noopener noreferrer" className="bg-white text-brand-primary px-12 py-6 rounded-3xl text-2xl font-black shadow-3xl hover:bg-brand-mint hover:scale-105 transition-all duration-300 inline-block">
             REGISTER NOW FOR ₹99
           </a>
 
