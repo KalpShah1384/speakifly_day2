@@ -63,10 +63,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className={`glass rounded-3xl px-8 py-4 flex items-center justify-between transition-all duration-300 ${scrolled ? 'bg-white/90 shadow-2xl' : 'bg-white/50 border-transparent shadow-none'}`}>
           <div className="flex items-center gap-2 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <div className="bg-brand-primary p-2 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-              <Zap className="fill-white text-white w-5 h-5" />
+            <div className="p-1 transition-transform duration-300 group-hover:scale-110">
+              <BookOpen className="text-brand-dark w-7 h-7" />
             </div>
-            <span className="text-xl font-display font-extrabold text-brand-dark tracking-tighter">Speakifly</span>
+            <span className="text-2xl font-display font-black text-brand-dark tracking-tight">Speakifly</span>
           </div>
 
           <div className="hidden md:flex items-center gap-10">
@@ -96,7 +96,10 @@ const Navbar = () => {
           >
             <div className="p-8">
               <div className="flex justify-between items-center mb-16">
-                <span className="text-xl font-display font-black text-brand-dark">Speakifly</span>
+                <div className="flex items-center gap-2">
+                  <BookOpen className="text-brand-dark w-6 h-6" />
+                  <span className="text-xl font-display font-black text-brand-dark">Speakifly</span>
+                </div>
                 <button onClick={() => setMobileMenuOpen(false)}><X className="w-8 h-8 text-brand-primary" /></button>
               </div>
               <div className="flex flex-col gap-10">
@@ -255,7 +258,7 @@ const BonusSection = () => (
           "Free Speaking Practice PDF",
           "30-Day Basic Practice Plan",
           "Certificate of Participation",
-          "Optional Recording Access"
+          "1-on-1 Strategic Session"
         ].map((item, i) => (
           <motion.div
             key={i}
@@ -286,7 +289,7 @@ const ImpactSection = () => (
     <div className="max-w-7xl mx-auto px-6 relative">
       <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
         <div className="lg:w-1/2">
-          <h2 className="text-4xl md:text-6xl font-display font-black leading-tight mb-8 text-white">Why 48 Hours <br /> is Enough?</h2>
+          <h2 className="text-4xl md:text-6xl font-display font-black leading-tight mb-8 text-white">Why 2 Days <br /> is Enough?</h2>
           <p className="text-xl text-brand-light font-medium mb-12 opacity-80 leading-relaxed">We don't teach grammar rules you can find on YouTube. We focus on the <span className="text-white underline decoration-brand-secondary underline-offset-8">psychology of speech</span> and professional frameworks.</p>
 
           <div className="space-y-6">
@@ -296,8 +299,8 @@ const ImpactSection = () => (
           </div>
         </div>
         <div className="lg:w-1/2 grid grid-cols-2 gap-8">
-          <StatBox num="10k+" label="Career Transformations" />
-          <StatBox num="500+" label="Live Sessions Done" />
+          <StatBox num="1k+" label="Career Transformations" />
+          <StatBox num="100+" label="Live Sessions Done" />
           <StatBox num="4.9" label="Avg User Rating" />
           <StatBox num="100%" label="Action Focused" />
         </div>
@@ -404,21 +407,61 @@ const TrainerSection = () => (
 
         <div className="flex flex-col lg:flex-row gap-20 items-center relative z-10">
           <div className="w-full lg:w-1/2">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-brand-secondary/20 rounded-[48px] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <img
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600"
-                alt="Isha Shah"
-                className="relative rounded-[40px] shadow-2xl w-full max-w-md mx-auto aspect-[3/4] object-cover grayscale transition-all duration-700 group-hover:grayscale-0"
-              />
-              <motion.div
-                animate={{ rotate: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 4 }}
-                className="absolute -top-10 -right-10 glass p-10 rounded-3xl"
-              >
-                <Award className="text-brand-primary w-8 h-8" />
-                <span className="text-[10px] font-black uppercase tracking-widest block mt-2 text-brand-dark">Top Rated</span>
-              </motion.div>
+            <div className="relative">
+              {/* Modern Graphic Feature instead of Image */}
+              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto">
+                {/* Background Decor */}
+                <div className="absolute inset-0 bg-brand-primary/5 rounded-[48px] -rotate-6 transition-transform duration-700 group-hover:rotate-0"></div>
+                <div className="absolute inset-0 bg-brand-secondary/5 rounded-[48px] rotate-3 transition-transform duration-700 group-hover:rotate-0"></div>
+
+                {/* Main Content Card */}
+                <div className="absolute inset-0 bg-white border border-slate-100 shadow-3xl rounded-[48px] p-10 flex flex-col items-center justify-center text-center overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-2 bg-brand-primary"></div>
+
+                  <div className="mb-8 relative">
+                    <div className="w-28 h-28 bg-brand-primary/10 rounded-full flex items-center justify-center relative z-10">
+                      <Users className="text-brand-primary w-14 h-14" />
+                    </div>
+                    <div className="absolute -inset-4 bg-brand-primary/5 blur-2xl rounded-full"></div>
+                  </div>
+
+                  <h3 className="text-2xl font-display font-black text-brand-dark mb-1">Expert Instruction</h3>
+                  <div className="text-brand-primary text-[10px] font-black uppercase tracking-[0.3em] mb-10">Communication Mastery</div>
+
+                  <div className="grid grid-cols-2 gap-4 w-full">
+                    <div className="p-5 bg-slate-50/50 rounded-3xl border border-slate-100 flex flex-col items-center gap-1 group/item hover:bg-white hover:shadow-xl transition-all">
+                      <div className="text-3xl font-display font-bold text-brand-dark">5+</div>
+                      <div className="text-[8px] font-black uppercase tracking-widest text-slate-400">Years Exp</div>
+                    </div>
+                    <div className="p-5 bg-slate-50/50 rounded-3xl border border-slate-100 flex flex-col items-center gap-1 group/item hover:bg-white hover:shadow-xl transition-all">
+                      <div className="text-3xl font-display font-bold text-brand-dark">1k+</div>
+                      <div className="text-[8px] font-black uppercase tracking-widest text-slate-400">Students</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 flex items-center gap-3 py-3 px-6 bg-emerald-50 rounded-full border border-emerald-100">
+                    <ShieldCheck className="text-emerald-500 w-5 h-5" />
+                    <span className="text-[10px] font-black uppercase tracking-widest text-emerald-700">ISO Certified Training</span>
+                  </div>
+                </div>
+
+                {/* Floating Elements */}
+                <motion.div
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                  className="absolute -top-8 -right-8 glass p-8 rounded-3xl shadow-2xl border border-white/50 z-20"
+                >
+                  <Award className="text-brand-primary w-10 h-10" />
+                </motion.div>
+
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+                  className="absolute -bottom-6 -left-6 bg-brand-dark text-white py-4 px-8 rounded-2xl shadow-2xl font-display font-black text-xs tracking-widest uppercase z-20"
+                >
+                  Live Coaching
+                </motion.div>
+              </div>
             </div>
           </div>
 
@@ -486,7 +529,7 @@ const FinalCTASection = () => (
             </div>
             <div className="w-px h-24 bg-white/20 hidden md:block"></div>
             <div className="flex-1 text-center md:text-left">
-              <p className="text-xl text-white font-medium mb-4 leading-snug">Limited to 100 students to ensure quality live interaction.</p>
+              <p className="text-xl text-white font-medium mb-4 leading-snug">Limited to 20 students to ensure quality live interaction.</p>
               <div className="flex items-center justify-center md:justify-start gap-2">
                 <Clock size={16} className="text-brand-secondary" />
                 <span className="text-xs font-black uppercase tracking-widest text-brand-secondary">Starts This Weekend</span>
@@ -527,9 +570,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row justify-between items-start gap-20 mb-24">
         <div className="max-w-sm">
           <div className="flex items-center gap-2 mb-8">
-            <div className="bg-brand-primary p-2 rounded-xl">
-              <Zap className="fill-white text-white w-5 h-5" />
-            </div>
+            <BookOpen className="text-brand-dark w-6 h-6" />
             <span className="text-2xl font-display font-black text-brand-dark">Speakifly</span>
           </div>
           <p className="text-slate-400 font-medium leading-relaxed mb-10">Empowering Indian professionals with the linguistic confidence to command global opportunities.</p>
@@ -541,7 +582,7 @@ const Footer = () => (
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-20 flex-1">
           <FooterGroup title="Platform" links={['Home', 'Program', 'Trainer', 'Blog']} />
           <FooterGroup title="Support" links={['Privacy', 'Refunds', 'Contact', 'FAQ']} />
-          <FooterGroup title="Impact" num="10k+" label="Career Switches Facilitated in 2025." />
+          <FooterGroup title="Impact" num="1k+" label="Career Switches Facilitated since 2021." />
         </div>
       </div>
 
