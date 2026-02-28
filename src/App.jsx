@@ -258,7 +258,7 @@ const BonusSection = () => (
           "Free Speaking Practice PDF",
           "30-Day Basic Practice Plan",
           "Certificate of Participation",
-          "1-on-1 Strategic Session"
+          "1-on-1 Strategic Session (First 10 Students Only)"
         ].map((item, i) => (
           <motion.div
             key={i}
